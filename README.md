@@ -55,7 +55,11 @@ strongInstall::install_strong_pkg()
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/strongInstall_pkg/main/img/install_pkg.png" width="70%" height="70%" />
 </p>
+
+
 上述代码初次运行后会出现一串序列号，根据提示复制序列号，然后发送给管理员进行授权。授权后再次运行`strongInstall::install_strong_pkg()`直至出现" **strong包安装成功！**" 字样即表明`strong包`安装成功。
+
+
 
 ### 3.3 一键升级strong包
 

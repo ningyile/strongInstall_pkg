@@ -9,6 +9,7 @@
 
 ## 2 安装strongInstall包
 - [单击此处](https://github.com/ningyile/strongInstall_pkg/releases)下载strongInstall包，根据不同的平台下载不同的二进制安装包。
+- `strong包`仅支持R V4.2以上版本。
 
 ### 2.1 Windows下strongInstall包的安装
 - Windows系统下载`strongInstall_1.0.1.zip`。然后依次单击Rstudio中的【Packages】、【Install】，然后在弹出的对话框单击【Browse】中选择相应下载路径中的`strongInstall_1.0.1.zip`即可。
@@ -38,9 +39,14 @@ strongInstall::install_strong_dep()
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/strongInstall_pkg/main/img/install_dep.png" width="70%" height="70%" />
 </p>
+
+
 直至出现"  **-- 依赖包全部安装完毕 --** " 字样即可进行下一步以安装`strong包`。
 
+
+
 ### 3.2 一键安装strong包
+
 在依赖包安装完毕后，在控制台运行以下代码以获取授权码：
 
 ```R

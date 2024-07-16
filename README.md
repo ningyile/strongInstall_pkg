@@ -12,18 +12,18 @@
 - `strong包`仅支持R V4.2以上版本。
 
 ### 2.1 Windows下strongInstall包的安装
-- Windows系统下载`strongInstall_1.0.1.zip`。然后依次单击Rstudio中的【Packages】、【Install】，然后在弹出的对话框单击【Browse】中选择相应下载路径中的`strongInstall_1.0.1.zip`即可。
+- Windows系统下载`strongInstall_1.0.7.zip`。然后依次单击Rstudio中的【Packages】、【Install】，然后在弹出的对话框单击【Browse】中选择相应下载路径中的`strongInstall_1.0.7.zip`即可。
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/strongInstall_pkg/main/img/win.png" width="70%" height="70%" />
 </p>
 ### 2.2 macOS下strongInstall包的安装
-- Intel芯片的macOS系统下载`strongInstall_intel_1.0.1.tgz`，M系列芯片的macOS系统下载`strongInstall_apple_1.0.1.tgz`。然后依次单击Rstudio中的【Packages】、【Install】，然后在弹出的对话框单击【Browse】中选择相应下载路径中的`tgz文件`即可。
+- Intel芯片的macOS系统下载`strongInstall_intel_1.0.7.tgz`，M系列芯片的macOS系统下载`strongInstall_apple_1.0.7.tgz`。然后依次单击Rstudio中的【Packages】、【Install】，然后在弹出的对话框单击【Browse】中选择相应下载路径中的`tgz文件`即可。
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/strongInstall_pkg/main/img/mac.png" width="70%" height="70%" />
 </p>
 
 ### 2.3 Linux下strongInstall包的安装
-- Linux系统下载`strongInstall_1.0.1_R_x86_64-pc-linux-gnu.tar.gz`。然后依次单击Rstudio中的【Packages】、【Install】，然后在弹出的对话框单击【Browse】中选择相应下载路径中的`gz文件`即可。
+- Linux系统下载`strongInstall_1.0.7_R_x86_64-pc-linux-gnu.tar.gz`。然后依次单击Rstudio中的【Packages】、【Install】，然后在弹出的对话框单击【Browse】中选择相应下载路径中的`gz文件`即可。
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/strongInstall_pkg/main/img/linux.png" width="70%" height="70%" />
 </p>
@@ -57,13 +57,30 @@ strongInstall::install_strong_pkg()
 </p>
 
 
-上述代码初次运行后会出现一串序列号，根据提示复制序列号，然后发送给管理员进行授权。授权后再次运行`strongInstall::install_strong_pkg()`直至出现" **strong包安装成功！**" 字样即表明`strong包`安装成功。
+上述代码初次运行后会出现一串序列号，根据提示复制序列号，然后发送给管理员进行授权。授权后再次运行`strongInstall::install_strong_pkg()`直至出现" **strong包安装成功！**" 字样即表明`strong包`安装成功。若还未授权注册，初次安装后运行`library(strong)`加载strong包，即可看到设备序列号，发送给客服即可。
 
 
 
 ### 3.3 一键升级strong包
 
-后续加载`strong包`时若提示版本过低，则可根据提示在控制台运行`strongInstall::install_strong_pkg()`以安装最新版的`strong包`。
+后续加载`strong包`时若提示版本过低，则需要进行更新strong包至最新版。需要注意的是strongInstall V1.0.7版本之后支持云端一键更新，因此后续的strongInstall版本不再发布。安装完strongInstall V1.0.7之后，依次运行下列三个命令即可。
+
+### 更新strongInstall包（防止大版本更新时有新的依赖）
+```R
+strongInstall::update()
+```
+### 安装依赖包
+```R
+strongInstall::install_strong_dep()
+```
+### 安装strong包
+```R
+strongInstall::install_strong_pkg()
+```
 
 ## 4 更新日志
+- **V1.0.7** 此版本支持一键云端更新功能，因此后续的strongInstall版本不再发布。安装完strongInstall V1.0.7之后，依次运行三个命令即可。
+
 - **V1.0.1** 初次发布，含一键安装依赖包和strong包功能。
+
+  
